@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class Alumno {
 	private String nombre;
 	private String apellido;
-	private LocalDate fechanac;
+	private String fechanac;
 	private int dni;
 	private int telefono;
 	
@@ -15,7 +15,7 @@ public class Alumno {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Alumno(String nombre, String apellido, LocalDate fechanac, int dni, int telefono) {
+	public Alumno(String nombre, String apellido, String fechanac, int dni, int telefono) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -40,11 +40,11 @@ public class Alumno {
 		this.apellido = apellido;
 	}
 
-	public LocalDate getFechanac() {
+	public String getFechanac() {
 		return fechanac;
 	}
 
-	public void setFechanac(LocalDate fechanac) {
+	public void setFechanac(String fechanac) {
 		this.fechanac = fechanac;
 	}
 
