@@ -22,13 +22,20 @@ public ModelAndView getEdad (@RequestParam (name= "fecha") String fecha) {
 	
 	//calcular la edad
 	String resultadoEdad=persona.getEdad();
+	String resultadoZodiaco=persona.Zodiaco();
+	String resultadoEstacion= persona.Estacion();
+	
 	
 	//mandar el resultado a la vista
 	ModelAndView modelView = new ModelAndView("punto1tp2");
-	modelView.addObject("resultado1",resultadoEdad);
 	
+	modelView.addObject("resultado1",resultadoEdad);
+	modelView.addObject("resultado2",resultadoZodiaco);
+	modelView.addObject("resultado3",resultadoEstacion);
 	return modelView;
 }
+
+
 	
 	
 
