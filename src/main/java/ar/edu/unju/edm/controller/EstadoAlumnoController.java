@@ -20,7 +20,7 @@ public class EstadoAlumnoController {
 		model.addAttribute("Libreta",punto3.getLibreta());
 		model.addAttribute("Promedio",punto3.calcularPromedio());
 		model.addAttribute("NotaMaxima",punto3.conseguirNotaMaxima());
-		return "Punto3tp02";
+		return "punto3tp02";
 	}
 
 }
