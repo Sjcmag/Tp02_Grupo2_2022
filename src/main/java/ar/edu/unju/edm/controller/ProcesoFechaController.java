@@ -61,8 +61,8 @@ public class ProcesoFechaController {
 	// b)
 	@GetMapping("/procesoFechaB1")
 	public ModelAndView getProcesoFecha() {
-		ModelAndView modelView = new ModelAndView("/procesoFechaPuntoB1");
-		ProcesoFecha profecha1 = new ProcesoFecha(LocalDate.of(2000, 4, 15), LocalDate.now());
+		ModelAndView modelView = new ModelAndView("/procesoFechaB1");
+		ProcesoFecha profecha1 = new ProcesoFecha(LocalDate.of(2005, 7, 14), LocalDate.now());
 		modelView.addObject("variable1", profecha1.getFecha1());
 		modelView.addObject("variable2", profecha1.getFecha2());
 		return modelView;
@@ -75,10 +75,10 @@ public class ProcesoFechaController {
     	modelView.addObject("variable2", profecha2.getTime2().minusMinutes(20));
     	return modelView;
     }
-    @GetMapping("/procesosFechaB3")
+    @GetMapping("/procesoFechaB3")
     public ModelAndView getProcesoFecha3() {
     	ModelAndView modelView = new ModelAndView("/procesoFechaB3");
-    	ProcesoFecha profecha3 = new ProcesoFecha(LocalDateTime.of(2003,  7, 26, 12, 53, 10), LocalDateTime.of(2022, 5, 14, 17, 13, 36));
+    	ProcesoFecha profecha3 = new ProcesoFecha(LocalDateTime.of(2003,  8, 21, 14, 40, 00), LocalDateTime.of(2022, 7, 14, 17, 21, 28));
     	modelView.addObject("variable1", profecha3.getDateTime1());
     	modelView.addObject("variable2", profecha3.getDateTime2());
     	
@@ -87,7 +87,7 @@ public class ProcesoFechaController {
     @GetMapping("/procesoFechaB4")
     public ModelAndView getProcesoFecha4() {
     	ModelAndView modelView = new ModelAndView("/procesoFechaB4");
-    	ProcesoFecha profecha4 = new ProcesoFecha(LocalDate.of(2003, 7, 26), LocalDate.now());
+    	ProcesoFecha profecha4 = new ProcesoFecha(LocalDate.of(2003, 8, 21), LocalDate.now());
     	Period tiempoTranscurrido = profecha4.contarTiempoTranscurrido();
     	modelView.addObject("variable1", tiempoTranscurrido.getYears());
     	modelView.addObject("variable2", tiempoTranscurrido.getMonths());
